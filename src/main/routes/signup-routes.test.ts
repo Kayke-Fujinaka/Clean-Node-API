@@ -13,6 +13,7 @@ describe('SignUp Routes', () => {
   })
 
   beforeEach(async() => {
+    jest.useRealTimers()
     const accountCollection = MongoHelper.getCollection('accounts')
     await accountCollection.deleteMany({})
   })
