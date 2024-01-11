@@ -1,4 +1,8 @@
-import { type Controller, type HttpRequest, type HttpResponse } from '../../presentation/protocols'
+import {
+  type Controller,
+  type HttpRequest,
+  type HttpResponse
+} from '../../presentation/protocols'
 import { LogControllerDecorator } from './log'
 
 const makeController = (): Controller => {
@@ -10,7 +14,9 @@ const makeController = (): Controller => {
           name: 'Kayke'
         }
       }
-      return await new Promise(resolve => { resolve(httpResponse) })
+      return await new Promise((resolve) => {
+        resolve(httpResponse)
+      })
     }
   }
 
