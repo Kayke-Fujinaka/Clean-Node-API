@@ -5,9 +5,14 @@ import {
   type HttpRequest,
   type HttpResponse
 } from '../../protocols'
+import { type EmailValidator } from '../signup/signup-protocols'
 
 export class LoginController implements Controller {
-  //   constructor() {}
+  private readonly emailValidator: EmailValidator
+
+  constructor(emailValidator: EmailValidator) {
+    this.emailValidator = emailValidator
+  }
 
   async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
     if (!httpRequest.body.email) {
@@ -21,5 +26,7 @@ export class LoginController implements Controller {
         resolve(badRequest(new MissingParamError('password')))
       })
     }
+
+    this.emailValidator.isValid(httpRequest.body.email)
   }
 }
