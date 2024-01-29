@@ -1,5 +1,5 @@
 import { MissingParamError } from '../../errors'
-import { LoginController } from './login'
+import { LoginController } from './login-controller'
 import {
   badRequest,
   ok,
@@ -9,7 +9,7 @@ import {
   type AuthenticationModel,
   type HttpRequest,
   type Validation
-} from './login-protocols'
+} from './login-controller-protocols'
 
 const makeValidation = (): Validation => {
   class ValidationStub implements Validation {

@@ -1,5 +1,5 @@
 import { type Hasher } from '../../protocols/criptography/hasher'
-import { type AddAccountRepository } from '../../protocols/db/add-account-repository'
+import { type AddAccountRepository } from '../../protocols/db/account/add-account-repository'
 import {
   type AccountModel,
   type AddAccount,
