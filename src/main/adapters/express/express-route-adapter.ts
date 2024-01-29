@@ -8,7 +8,7 @@ import {
 import {
   type Controller,
   type HttpRequest
-} from '../../presentation/protocols'
+} from '../../../presentation/protocols'
 
 export const adaptRoute = (controller: Controller): RequestHandler => {
   return (req: Request, res: Response, next: NextFunction) => {
