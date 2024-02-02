@@ -17,6 +17,6 @@ services:
     volumes:
       - ./dist:/usr/src/Clean-Node-API/dist
     ports:
-      - "5000:5050"
+      - "5050:5050"
     links:
       - mongo
