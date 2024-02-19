@@ -1,6 +1,6 @@
 import { Router, type Express } from 'express'
-import { readdirSync } from 'node:fs'
-import path from 'node:path'
+import { readdirSync } from 'fs'
+import path from 'path'
 
 export default (app: Express): void => {
   const router = Router()
